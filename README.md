@@ -22,6 +22,21 @@ npm run build
 npm run preview
 ```
 
+## Deploy to Vercel
+
+This project is configured to be served from `/fleet-map-demo/`. Deploy it as its own Vercel project with the Vite preset, `npm run build` as the build command, and `dist` as the output directory.
+
+To expose it at `https://franciscocordova.dev/fleet-map-demo`, keep the custom domain assigned to the portfolio project and add this rewrite in that project's `vercel.json`, replacing the destination with this deployment's production URL:
+
+```json
+{
+  "rewrites": [
+    { "source": "/fleet-map-demo", "destination": "https://fleet-ops-panel.vercel.app/" },
+    { "source": "/fleet-map-demo/:path*", "destination": "https://fleet-ops-panel.vercel.app/:path*" }
+  ]
+}
+```
+
 ## Implementation notes
 
 - MapLibre renders Frankfurt buildings and vehicle volumes in a shared 3D scene.

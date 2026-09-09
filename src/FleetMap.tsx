@@ -15,6 +15,7 @@ type FleetMapProps = { running: boolean; speed: number; count: number; generatio
 const FRANKFURT_CENTER: Coordinate = [8.6745, 50.1115]
 const MAP_BOUNDS: [[number, number], [number, number]] = [[8.58, 50.06], [8.77, 50.17]]
 const ROAD_BOUNDS = { minLongitude: 8.65, maxLongitude: 8.705, minLatitude: 50.098, maxLatitude: 50.126 }
+const MAP_STYLE_URL = `${import.meta.env.BASE_URL}data/map-style.json`
 
 function isInRoadBounds([longitude, latitude]: Coordinate): boolean {
   return longitude > ROAD_BOUNDS.minLongitude && longitude < ROAD_BOUNDS.maxLongitude && latitude > ROAD_BOUNDS.minLatitude && latitude < ROAD_BOUNDS.maxLatitude
@@ -44,7 +45,7 @@ export function FleetMap(props: FleetMapProps) {
     onSnapshot([])
     onStatus('Loading map data…')
     try {
-      map = new maplibregl.Map({ container: container.current, style: '/data/map-style.json', center: FRANKFURT_CENTER, zoom: 15.2, pitch: latest.current.threeD ? 58 : 0, bearing: latest.current.threeD ? -24 : 0, maxZoom: 18.5, minZoom: 12, maxBounds: MAP_BOUNDS, attributionControl: { compact: true } })
+      map = new maplibregl.Map({ container: container.current, style: MAP_STYLE_URL, center: FRANKFURT_CENTER, zoom: 15.2, pitch: latest.current.threeD ? 58 : 0, bearing: latest.current.threeD ? -24 : 0, maxZoom: 18.5, minZoom: 12, maxBounds: MAP_BOUNDS, attributionControl: { compact: true } })
       mapRef.current = map
     } catch (error) { console.error('Unable to initialize MapLibre:', error); onStatus('Unable to initialize the map. Enable WebGL or hardware acceleration.'); return }
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'bottom-right')
