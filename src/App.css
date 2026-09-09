@@ -1,0 +1,652 @@
+.app-shell {
+  height:100dvh;
+  min-height:680px;
+  display:flex;
+  flex-direction:column}
+.topbar {
+  height:78px;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 30px;
+  border-bottom:1px solid var(--border);
+  background:#fff}
+.brand {
+  display:flex;
+  align-items:center;
+  font:800 25px 'Manrope',sans-serif;
+  letter-spacing:-1.3px}
+.brand-light {
+  font-weight:500}
+.brand-icon {
+  width:37px;
+  height:37px;
+  background:var(--green);
+  color:#fff;
+  border-radius:11px;
+  display:grid;
+  place-items:center;
+  margin-right:10px}
+.top-location {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px}
+.top-location>span {
+  color:var(--muted);
+  border-left:1px solid var(--border);
+  margin-left:7px;
+  padding-left:14px}
+.workspace {
+  display:flex;
+  flex:1;
+  min-height:0;
+  padding:20px;
+  gap:20px}
+.sidebar {
+  width:326px;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden}
+.panel-heading {
+  padding:25px 24px 26px}
+.eyebrow {
+  font-size:10px;
+  letter-spacing:1.8px;
+  font-weight:650;
+  color:#7a877e}
+.panel-heading h1 {
+  font:650 29px/1.24 'Manrope',sans-serif;
+  letter-spacing:-1.2px;
+  margin:13px 0 11px;
+  max-width:255px}
+.panel-heading h1>span {
+  color:#59a181}
+.panel-heading p {
+  font-size:12px;
+  color:var(--muted)}
+.section-label {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 24px;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:1px}
+.section-label>span:first-child {
+  display:flex;
+  align-items:center;
+  gap:7px}
+.live-label {
+  font-size:9px;
+  color:var(--green);
+  background:#edf6ef;
+  padding:4px 6px;
+  border-radius:3px}
+.metrics {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  margin:17px 24px 22px;
+  gap:12px}
+.metrics>div {
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:12px}
+.metrics>div>span {
+  font-size:11px;
+  color:var(--muted)}
+.metrics strong {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font:600 30px 'Manrope',sans-serif;
+  margin-top:6px;
+  letter-spacing:-1px;
+  font-variant-numeric:tabular-nums}
+.metrics strong svg {
+  color:#92a398}
+.metrics small {
+  font:450 11px 'DM Sans',sans-serif;
+  color:var(--muted);
+  letter-spacing:0}
+.simulation-controls {
+  padding:0 24px 23px;
+  border-bottom:1px solid var(--border)}
+.label-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:11px}
+.label-row output {
+  color:var(--muted);
+  font-variant-numeric:tabular-nums}
+.simulation-controls input {
+  width:100%;
+  height:4px;
+  margin:17px 0 9px;
+  display:block}
+.range-ends {
+  display:flex;
+  justify-content:space-between;
+  color:#9aa49d;
+  font-size:10px}
+.speed-row {
+  margin:18px 0}
+.segmented {
+  background:#f1f4f0;
+  border-radius:5px;
+  padding:3px;
+  display:flex}
+.segmented button {
+  font-size:11px;
+  padding:4px 9px;
+  border-radius:3px}
+.segmented button[aria-pressed=true] {
+  background:white;
+  color:var(--green);
+  box-shadow:0 1px 4px #253b3510}
+.actions {
+  display:flex;
+  gap:8px}
+.primary {
+  background:var(--green);
+  color:white;
+  border-radius:6px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  flex:1;
+  font-size:12px;
+  font-weight:550}
+.reset {
+  width:39px;
+  border:1px solid var(--border);
+  border-radius:6px;
+  display:grid;
+  place-items:center}
+.fleet-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 24px 12px}
+.fleet-heading h2 {
+  font-size:13px;
+  font-weight:600}
+.fleet-heading h2>span {
+  font-size:10px;
+  background:var(--mint);
+  color:var(--muted);
+  padding:3px 6px;
+  border-radius:4px;
+  margin-left:5px}
+.fleet-heading button {
+  display:grid;
+  place-items:center;
+  width:25px;
+  height:25px;
+  border:1px solid var(--border);
+  border-radius:5px}
+.vehicle-list {
+  overflow:auto;
+  flex:1;
+  min-height:90px;
+  padding:0 12px 12px;
+  scrollbar-width:thin}
+.vehicle-row {
+  width:100%;
+  display:flex;
+  align-items:center;
+  text-align:left;
+  padding:11px 9px;
+  border:1px solid transparent;
+  border-radius:7px;
+  gap:10px;
+  margin-bottom:3px}
+.vehicle-row:hover {
+  background:#f6f8f5}
+.vehicle-row.selected {
+  background:#eff6ef;
+  border-color:#d6e5d8}
+.vehicle-icon {
+  width:34px;
+  height:34px;
+  border:1px solid #dce9df;
+  background:#f2f7f2;
+  color:#3f8562;
+  border-radius:8px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0}
+.vehicle-icon.truck {
+  background:#fff7d6;
+  color:#bd8500;
+  border-color:#f1d77e}
+.vehicle-name {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  flex:1}
+.vehicle-name strong {
+  font-size:11px;
+  font-weight:600}
+.vehicle-name small {
+  font-size:10px;
+  color:var(--muted)}
+.vehicle-speed {
+  font-size:12px;
+  font-variant-numeric:tabular-nums;
+  text-align:right}
+.vehicle-speed small {
+  display:block;
+  font-size:9px;
+  color:var(--muted);
+  margin-top:3px}
+.vehicle-row>svg {
+  color:#a9b0aa}
+.map-panel {
+  position:relative;
+  flex:1;
+  min-width:0;
+  overflow:hidden;
+  border-radius:12px;
+  border:1px solid #dce3db;
+  background:#e8ede6}
+.map-canvas {
+  position:absolute;
+  inset:0}
+.map-vehicle-pin {
+  position:relative;
+  width:38px;
+  height:44px;
+  padding:0;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  filter:drop-shadow(0 3px 4px #183a2b55)}
+.map-vehicle-pin::before {
+  content:'';
+  position:absolute;
+  top:4px;
+  left:4px;
+  width:28px;
+  height:28px;
+  background:#fff;
+  border:3px solid #168664;
+  border-radius:50% 50% 50% 0;
+  transform:rotate(-45deg);
+  box-shadow:0 0 0 3px #ffffff99}
+.map-vehicle-pin::after {
+  content:'';
+  position:absolute;
+  top:15px;
+  left:15px;
+  width:9px;
+  height:9px;
+  background:#168664;
+  border-radius:50%;
+  box-shadow:0 0 0 2px #ffffff}
+.map-vehicle-pin:hover::before,
+.map-vehicle-pin.selected::before {
+  border-color:#20c997;
+  box-shadow:0 0 0 6px #20c99740,0 0 0 3px #ffffff99}
+.map-vehicle-pin:hover::after,
+.map-vehicle-pin.selected::after {
+  background:#20c997}
+.map-vehicle-pin.following::before {
+  border-color:#00d89e;
+  box-shadow:0 0 0 10px #00d89e33,0 0 0 3px #ffffff99}
+.map-vehicle-pin.following::after {
+  background:#00d89e}
+.map-top {
+  position:absolute;
+  top:27px;
+  left:28px;
+  right:23px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  pointer-events:none}
+.map-title {
+  background:#ffffffdf;
+  padding:16px 20px;
+  border:1px solid #ffffffaa;
+  border-radius:8px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 3px 20px #223a3210}
+.map-title h2 {
+  font:650 27px 'Manrope',sans-serif;
+  letter-spacing:-1px;
+  margin:5px 0 8px}
+.map-title h2>span {
+  display:block;
+  font-size:16px;
+  letter-spacing:-.3px;
+  font-weight:450;
+  margin-top:1px;
+  color:#6e7b72}
+.map-coordinates {
+  font-size:10px;
+  color:#8a948b;
+  letter-spacing:.5px}
+.map-mode {
+  display:flex;
+  background:#fffffff2;
+  border:1px solid #e1e6de;
+  border-radius:7px;
+  padding:4px;
+  box-shadow:0 3px 12px #223a3210;
+  pointer-events:auto}
+.map-mode button {
+  padding:8px 12px;
+  font-size:11px;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  border-radius:4px}
+.map-mode button[aria-pressed=true] {
+  background:var(--green);
+  color:white}
+.map-tools {
+  position:absolute;
+  top:88px;
+  right:23px}
+.map-tools button {
+  width:39px;
+  height:39px;
+  background:white;
+  display:grid;
+  place-items:center;
+  border:1px solid #e1e6de;
+  border-radius:7px;
+  box-shadow:0 3px 12px #223a3210}
+.map-status {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 8px 45px #243c3120;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:max-content;
+  max-width:85%;
+  font-size:13px}
+.map-status button {
+  color:var(--green);
+  text-decoration:underline}
+.map-bottom {
+  position:absolute;
+  left:24px;
+  right:65px;
+  bottom:39px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  pointer-events:none}
+.legend {
+  display:flex;
+  gap:16px;
+  background:#fffffff0;
+  padding:11px 15px;
+  border-radius:6px;
+  font-size:10px;
+  box-shadow:0 2px 8px #223a3210}
+.legend span {
+  display:flex;
+  gap:6px;
+  align-items:center}
+.legend i {
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#238161}
+.legend i.truck {
+  background:#f5b700}
+.map-hint {
+  font-size:10px;
+  color:#55685a;
+  background:#ffffffd9;
+  padding:7px 10px;
+  border-radius:5px}
+.vehicle-detail {
+  position:absolute;
+  bottom:100px;
+  left:24px;
+  width:272px;
+  background:#fffffff5;
+  backdrop-filter:blur(12px);
+  border:1px solid white;
+  border-radius:10px;
+  padding:17px;
+  box-shadow:0 4px 30px #253b3520}
+.detail-heading {
+  display:flex;
+  align-items:center;
+  gap:10px}
+.detail-heading .eyebrow {
+  font-size:8px;
+  letter-spacing:1px}
+.detail-heading h3 {
+  font-size:15px;
+  margin-top:3px}
+.detail-heading button {
+  margin-left:auto;
+  align-self:flex-start}
+.detail-data {
+  display:flex;
+  gap:35px;
+  border-top:1px solid var(--border);
+  padding-top:13px;
+  margin-top:16px}
+.detail-data span {
+  display:block;
+  font-size:10px;
+  color:var(--muted)}
+.detail-data strong {
+  display:block;
+  font-size:22px;
+  font-weight:500;
+  margin-top:5px;
+  font-variant-numeric:tabular-nums}
+.detail-data small {
+  font-size:10px;
+  color:var(--muted)}
+.vehicle-detail p {
+  color:var(--muted);
+  font-size:10px;
+  margin-top:13px}
+.follow-button {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  min-height:40px;
+  margin-top:16px;
+  border:1px solid var(--green);
+  border-radius:6px;
+  color:var(--green);
+  font-weight:550}
+.follow-button[aria-pressed=true] {
+  background:var(--green);
+  color:white}
+.follow-hint {
+  display:block;
+  margin-top:8px;
+  font-size:11px;
+  color:var(--muted);
+  text-align:center}
+.empty-state {
+  display:grid;
+  justify-items:center;
+  gap:9px;
+  padding:24px 0;
+  color:var(--muted);
+  text-align:center}
+.empty-state p {
+  font-size:12px}
+.empty-state small {
+  font-size:10px}
+.maplibregl-ctrl-bottom-right {
+  right:12px;
+  bottom:26px}
+.maplibregl-ctrl-attrib {
+  font-size:10px!important}
+.maplibregl-ctrl-group {
+  border-radius:7px!important;
+  box-shadow:0 2px 8px #223a3220!important}
+.maplibregl-canvas:focus-visible {
+  outline:3px solid #329476;
+  outline-offset:-3px}
+
+@media(min-width:1550px) {
+  .sidebar {
+  width:360px}
+.panel-heading {
+  padding-top:32px;
+  padding-bottom:32px}
+.panel-heading h1 {
+  font-size:33px}
+.vehicle-row {
+  padding-top:14px;
+  padding-bottom:14px}
+.workspace {
+  padding:24px;
+  gap:24px}
+.topbar {
+  height:84px}
+}
+
+@media(max-width:1050px) {
+  .top-location {
+  display:none}
+.sidebar {
+  width:300px}
+.workspace {
+  padding:12px;
+  gap:12px}
+.map-hint {
+  display:none}
+.map-top {
+  left:18px;
+  right:16px;
+  top:18px}
+.map-title {
+  padding:12px 15px}
+.map-title h2 {
+  font-size:22px}
+.map-tools {
+  right:16px;
+  top:77px}
+}
+
+@media(max-width:700px) {
+  .app-shell {
+  height:auto;
+  min-height:100dvh}
+.topbar {
+  height:66px;
+  padding:0 16px}
+.brand {
+  font-size:22px}
+.brand-icon {
+  width:32px;
+  height:32px}
+.workspace {
+  flex-direction:column;
+  padding:10px;
+  gap:12px}
+.map-panel {
+  order:-1;
+  flex:none;
+  height:56dvh;
+  min-height:390px}
+.sidebar {
+  width:100%;
+  max-height:none}
+.panel-heading {
+  padding:22px 22px 20px}
+.panel-heading h1 {
+  max-width:none;
+  font-size:27px}
+.panel-heading p {
+  font-size:14px}
+.section-label {
+  font-size:11px}
+.metrics {
+  margin-bottom:20px}
+.metrics>div>span,.label-row {
+  font-size:13px}
+.simulation-controls {
+  padding-bottom:20px}
+.simulation-controls input {
+  height:7px;
+  margin-top:22px}
+.segmented button {
+  padding:8px 12px;
+  font-size:13px}
+.actions button {
+  height:44px}
+.fleet-heading h2 {
+  font-size:15px}
+.fleet-heading button {
+  height:36px;
+  width:36px}
+.vehicle-list {
+  max-height:290px;
+  flex:auto}
+.vehicle-name strong {
+  font-size:13px}
+.vehicle-name small {
+  font-size:12px}
+.vehicle-speed {
+  font-size:14px}
+.vehicle-row {
+  min-height:62px}
+.map-title h2 {
+  font-size:21px}
+.map-title .eyebrow {
+  font-size:8px}
+.map-title h2>span {
+  font-size:13px}
+.map-coordinates {
+  display:none}
+.map-mode button {
+  min-height:36px}
+.map-tools button {
+  width:44px;
+  height:44px}
+.map-bottom {
+  left:16px;
+  bottom:32px}
+.vehicle-detail {
+  bottom:85px;
+  left:16px;
+  width:250px}
+.vehicle-detail {
+  bottom:66px;
+  padding:12px}
+.detail-data {
+  margin-top:9px;
+  padding-top:9px}
+.follow-button {
+  min-height:44px;
+  margin-top:10px}
+}
+
+@media(prefers-reduced-motion:reduce) {
+  * {
+  scroll-behavior:auto!important}
+}
